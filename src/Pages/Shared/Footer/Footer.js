@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer items-center py-6 px-14 bg-base-100 text-primary border border-primary">
+        <footer className="footer items-center py-6 px-14 bg-primary text-white border border-primary">
             <div className="items-center grid-flow-col">
-                <img src={logo} alt="logo" className='w-20' />
-                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                <div className='w-24 p-2 rounded-md bg-base-100'>
+                    <img src={logo} alt="logo" />
+                </div>
+                <p className='text-lg'>Copyright © {new Date().getFullYear()} - All right reserved</p>
             </div>
             <div className='flex justify-end w-full'>
-                <Link to='/about' className="tooltip tooltip-primary" data-tip="About">
-                    <InformationCircleIcon className="h-8 w-8 text-primary" />
+                <Link to='/about' className="tooltip" data-tip="About">
+                    <InformationCircleIcon className="h-10 w-10 text-white" />
                 </Link>
             </div>
         </footer>
